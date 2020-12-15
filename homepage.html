@@ -44,9 +44,9 @@
         }
 
         .sidenav a {
-                font-size: 18px;
-                padding: 5px;
-            }
+            font-size: 18px;
+            padding: 5px;
+        }
 
         .main {
             margin-left: 300px;
@@ -86,8 +86,14 @@
         <a href="#API2">Form/ReadfromURL</a><br>
         <a href="#API3">Receipt/ReadReceiptfromFile</a><br>
         <a href="#API4">Receipt/ReadReceiptfromURL</a><br><br>
+        <a href="#postmantest">Testing Using Postman</a><br>
+        <a href="#POST1">File Upload API testing</a><br>
+        <a href="#POST2">URL input API testing </a><br><br>
         Video Tutorials<br>
-        <a href="#VIDEO1">Video: How to test using Swagger</a><br><br>
+        <a href="#VIDEO1">Video: How to test using Swagger</a><br>
+        <a href="#VIDEO2">Video: How to test using POSTMAN</a><br><br>
+        Sample Inputs<br>
+        <a href="#data">Sample jpgs/pdf files</a>
     </div>
 
     <div class="main">
@@ -98,7 +104,9 @@
 
         <div class="topnav">
             <a target="_blank" href="/FormRecognizerApi/docs">Swagger Playground</a>---------
-            <a target="_blank" href="https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/">Microsoft Azure documentaion</a>
+            <a target="_blank"
+                href="https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/">Microsoft Azure
+                documentaion</a>
         </div>
         <div id="aboutAPI">
             <h2>About the API</h2>
@@ -132,7 +140,8 @@
         </div>
         <div id="testing">
             <h2>Testing using Swagger</h2>
-            <p>These API methods can be tested using <a target="_blank" href="/FormRecognizerApi/docs">Swagger Playground</a></p>
+            <p>These API methods can be tested using <a target="_blank" href="/FormRecognizerApi/docs">Swagger
+                    Playground</a></p>
         </div>
         <div id="API1">
             <h3>Form/ReadfromFile</h3>
@@ -152,20 +161,23 @@
         </div>
         <div id="API2">
             <h3>Form/ReadfromURL</h3>
-            <p>This method works same way as ReadfromFile except instead of uploading the file, 
+            <p>This method works same way as ReadfromFile except instead of uploading the file,
                 you can enter the a web url for the file you would like to be recognized.</p>
-            <p>The URL string needs to be a valid one. The URL string is sent as part of the request body against the field name "URLstring".</p>
+            <p>The URL string needs to be a valid one. The URL string is sent as part of the request body against the
+                field name "URLstring".</p>
             <p>The file type must be of .pdf or .jpeg(jpg) or .tiff or .png.</p>
             <p><b>Steps</b></p>
             <p>After you expanded the "Form/ReadfromURL" API method, click on "Try it Out"</p>
             <img src="images/d22.jpg" alt="tryitout" width="990" height="660">
-            <p>Under the paramters section, you should see the request body with a single field name "URLstring". DO not modify this field name.
+            <p>Under the paramters section, you should see the request body with a single field name "URLstring". DO not
+                modify this field name.
                 <br>
                 Enter the address or complete url of the input file. Refer to the image below.
             </p>
             <img src="images/d23.jpg" alt="tryitout" width="990" height="660">
             <p>After you entered the URL you would like to be recognized, click Execute. <br>Note: Form Recognition is
-                AI involved process and the file needs to be fetched over internet. Please allow few minutes for the repsonse to appear. Be Patient.</p>
+                AI involved process and the file needs to be fetched over internet. Please allow few minutes for the
+                repsonse to appear. Be Patient.</p>
             <img src="images/d24.jpg" alt="tryitout" width="990" height="660">
             <p>Once the API is invoked successfully, you should see the form data in JSON format under the response
                 section.</p>
@@ -173,7 +185,7 @@
         </div>
         <div id="API3">
             <h3>Receipt/ReadReceiptfromFile</h3>
-            <p>This method works same way as Form/ReadfromFile. If your input file is a receipt , 
+            <p>This method works same way as Form/ReadfromFile. If your input file is a receipt ,
                 the response is more structured as per the data fields avaialbe in a receipt</p>
             <p>The file type must be of .pdf or .jpeg(jpg) or .tiff or .png.</p>
             <p><b>Steps</b></p>
@@ -189,33 +201,83 @@
 
         <div id="API4">
             <h3>Receipt/ReadReceiptfromURL</h3>
-            <p>This method works same way as Form/ReadfromURL. If your input file is a receipt , 
+            <p>This method works same way as Form/ReadfromURL. If your input file is a receipt ,
                 the response is more structured as per the data fields avaialbe in a receipt</p>
-            <p>The URL string needs to be a valid one. The URL string is sent as part of the request body against the field name "URLstring".</p>
+            <p>The URL string needs to be a valid one. The URL string is sent as part of the request body against the
+                field name "URLstring".</p>
             <p>The file type must be of .pdf or .jpeg(jpg) or .tiff or .png.</p>
             <p><b>Steps</b></p>
             <p>After you expanded the "Receipt/ReadReceiptfromURL" API method, click on "Try it Out"</p>
             <img src="images/d42.jpg" alt="tryitout" width="990" height="660">
-            <p>Under the paramters section, you should see the request body with a single field name "URLstring". DO not modify this field name.
+            <p>Under the paramters section, you should see the request body with a single field name "URLstring". DO not
+                modify this field name.
                 <br>
                 Enter the address or complete url of the input file.
             </p>
             <p>After you entered the URL you would like to be recognized, click Execute. <br>Note: Form Recognition is
-                AI involved process and the file needs to be fetched over internet. Please allow few minutes for the repsonse to appear. Be Patient.</p>
+                AI involved process and the file needs to be fetched over internet. Please allow few minutes for the
+                repsonse to appear. Be Patient.</p>
             <p>Once the API is invoked successfully, you should see the form data in JSON format under the response
                 section.</p>
             <p> Refer to images <a href="#API2">Form/ReadfromURL</a> section for steps</p>
         </div>
+        <br>
+        <div id="postmantest">
+            <h3>Testing using POSTMAN</h3>
+            These APIs can be testing the POSTMAN software. Use the below API endpoints to copy paste into the postman.
+            <br>
+            POST - http://206.189.199.15:3000/FormRecognizerApi/v1/Form/ReadfromFile <br>
+            POST - http://206.189.199.15:3000/FormRecognizerApi/v1/Form/ReadfromURL <br>
+            POST - http://206.189.199.15:3000/FormRecognizerApi/v1/Receipt/ReadReceiptfromFile <br>
+            POST - http://206.189.199.15:3000/FormRecognizerApi/v1/Receipt/ReadReceiptfromURL <br>
 
+
+        </div>
+        <div id="POST1">
+            <h3>File Upload API testing using POSTMAN</h3>
+            <p>This API allows you upload a single file of size less than 10 MB.</p>
+            <p>The file type must be of .pdf or .jpeg(jpg) or .tiff or .png.</p>
+            <p>Refer to below screenshot for instructions on how to test the File Upload APIs.</p>
+            <p>Same Instructions can be followed for both APIs 1. Form/ReadfromFile and 2. Receipt/ReadReceiptfromFile
+            </p>
+            <img src="images/p1.jpg" alt="tryitout" width="1200" height="800">
+            <img src="images/p2.jpg" alt="tryitout" width="1200" height="800">
+        </div>
+        <div id="API2">
+            <h3>URL input API testing using POSTMAN</h3>
+            <p>This API works same way as File upload API except instead of uploading the file,
+                you can enter the a web url for the file you would like to be recognized.</p>
+            <p>The URL string needs to be a valid one. The URL string is sent as part of the request body against the
+                field name "URLstring".</p>
+            <p>The file type must be of .pdf or .jpeg(jpg) or .tiff or .png.</p>
+            <p>Refer to below screenshot for instructions on how to test the URL input APIs.</p>
+            <p>Same Instructions can be followed for both APIs 1. Form/ReadfromURL and 2. Receipt/ReadReceiptfromURL</p>
+            <img src="images/p3.jpg" alt="tryitout" width="1200" height="800">
+            <img src="images/p4.jpg" alt="tryitout" width="1200" height="800">
+        </div>
         <br>
         <br>
 
         <div id="VIDEO1">
             <h3>Video: How to test using Swagger Playground</h3>
-            <p>Watched the below video about testing the API using the Swagger</p>
-        <iframe width="990" height="660" src="https://www.youtube.com/embed/nFZsMwO8Nc0">
-        </iframe>
-    </div>
+            <p>Watch the below video about testing the API using the Swagger</p>
+            <iframe width="1200" height="800" src="https://www.youtube.com/embed/nFZsMwO8Nc0">
+            </iframe>
+        </div>
+        <div id="VIDEO2">
+            <h3>Video: How to test using POSTMAN</h3>
+            <p>Watch the below video about testing the API using the POSTMAN</p>
+            <iframe width="1200" height="800" src="https://www.youtube.com/embed/CzqTxMOtfX0">
+            </iframe>
+        </div>
+
+        <div id="data">
+            <h2>Sample jpg/pdf files for testing</h2>
+            <p>Download the below files or copy the URLs directly</p>
+            <a href="https://www.ncdot.gov/dmv/downloads/Documents/DL-101.pdf">https://www.ncdot.gov/dmv/downloads/Documents/DL-101.pdf</a>
+            <a href="https://i.pinimg.com/474x/9d/45/79/9d457951f7ce2875b6c6afc0a8e3ef57.jpg">https://i.pinimg.com/474x/9d/45/79/9d457951f7ce2875b6c6afc0a8e3ef57.jpg</a>
+            <img src="images/r1.jpg" alt="API block diagram" width="800" height="800">
+        </div>
     </div>
 
 </body>

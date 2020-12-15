@@ -118,7 +118,7 @@ app.post('/FormRecognizerApi/v1/Form/ReadfromFile', async (req, res) => {
 
                     const path = __dirname + "/uploads/" + myfile.name; // pdf/jpeg/png/tiff formats
 
-                    const readStream = fs.createReadStream(path);
+                   const readStream = fs.createReadStream(path);
 
                     const client = new FormRecognizerClient(endpoint, new AzureKeyCredential(apiKey));
                     const poller = await client.beginRecognizeContent(readStream);
